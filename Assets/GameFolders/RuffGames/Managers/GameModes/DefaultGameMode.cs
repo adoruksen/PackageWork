@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using DG.Tweening;
 
 [CreateAssetMenu(menuName ="Game/GameMode/DefaultGameMode",fileName ="DefaultGameMode",order =-399)]
 public class DefaultGameMode : GameMode
@@ -33,13 +34,13 @@ public class DefaultGameMode : GameMode
     public override void CompleteGameMode()
     {
         GameManager.instance.SaveLevel(GameManager.instance.GetSavedLevel() + 1);
-        //DoVirtual.DelayedCall(1f,WinUiController.instance.Show,false);
+        DOVirtual.DelayedCall(1f,WinUiController.Instance.Show,false);
     }
 
 
     public override void FailGameMode()
     {
-        //DOVirtual.DelayedCall(2f,FailUiController.instance.Show,false);
+        DOVirtual.DelayedCall(2f,FailUiController.Instance.Show,false);
     }
 
     public override void DeinitializeGameMode()
