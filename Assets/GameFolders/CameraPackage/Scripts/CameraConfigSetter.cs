@@ -4,12 +4,9 @@ using UnityEngine;
 public class CameraConfigSetter : MonoBehaviour
 {
     [SerializeField] private CameraConfig gameplayConfig;
-    [SerializeField] private CameraConfig introConfig;
-
     [SerializeField] private CameraConfig finishConfig;
-    public bool isGame;
 
-    public GameObject _registeredCharacter;
+    public PlayerController _registeredCharacter;
 
     private void OnEnable()
     {
@@ -23,38 +20,38 @@ public class CameraConfigSetter : MonoBehaviour
         GameManager.OnGameEnd -= OnEnd;
     }
 
-    private void Update()
-    {
-        if (isGame)
-        {
-            SetGamePlayCamera(_registeredCharacter);
-        }
-    }
     private void OnInitialize()
     {
-        SetIntroCamera();
+        RegisterPlayer();
         CameraController.instance.ResetCamera();
     }
 
     private void OnEnd()
     {
+        UnregisterPlayer();
         SetFinishCamera();
     }
 
-
-    private void SetGamePlayCamera(GameObject obj)
+    private void RegisterPlayer()
     {
-        CameraController.instance.SetConfig(gameplayConfig);
+        _registeredCharacter = PlayerController.instance;
+        _registeredCharacter.MoveState.OnStateEntered += SetGamePlayCamera;
     }
 
-    private void SetIntroCamera()
+    private void UnregisterPlayer()
     {
-        CameraController.instance.SetConfig(introConfig);
+        _registeredCharacter.MoveState.OnStateEntered -= SetGamePlayCamera;
+    }
+
+    private void SetGamePlayCamera(PlayerController obj)
+    {
+        CameraController.instance.SetConfig(gameplayConfig);
     }
 
     private void SetFinishCamera()
     {
         CameraController.instance.SetConfig(finishConfig);
     }
+
 
 }

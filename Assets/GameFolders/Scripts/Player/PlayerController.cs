@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     [SerializeReference, BoxGroup("Idle", false), HorizontalGroup("Idle/Group")] public State IdleState;
     [SerializeReference, BoxGroup("Move", false), HorizontalGroup("Move/Group")] public MoveState MoveState;
     [SerializeReference, BoxGroup("Fnsh", false), HorizontalGroup("Fnsh/Group")] public FinishState FinishState;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         Rigidbody = GetComponent<Rigidbody>();
         Movement = GetComponent<PlayerMovement>();
         //Animation = GetComponent<PlayerAnimationController>();

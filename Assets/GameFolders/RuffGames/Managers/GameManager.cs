@@ -79,5 +79,4 @@ public class GameManager : RuffGameManager
     {
         OnGameEnd?.Invoke();
     }
-
 }

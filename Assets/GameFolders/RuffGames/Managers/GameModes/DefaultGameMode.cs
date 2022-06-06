@@ -14,19 +14,24 @@ public class DefaultGameMode : GameMode
     public override void InitializeGameMode()
     {
         //level oluþtur karakterin stateini ayarla.
+        IntroUiController.Instance.ShowInstant();
     }
 
     public override void StartGameMode(Action levelStart)
     {
-        Debug.Log("default game mode StartGameMode");
+        IntroUiController.Instance.Hide();
         if (! _playCameraAnimation)
         {
             StartGame();
             return;
         }
+        
+        StartGame();
         void StartGame()
         {
+            Debug.Log("default game mode StartGameMode");
             CameraController.instance.SetTarget(PlayerMovement.instance.GetComponent<CameraFollowTarget>());
+            PlayerController.instance.SetState(PlayerController.instance.MoveState);
             levelStart.Invoke();
         }
     }

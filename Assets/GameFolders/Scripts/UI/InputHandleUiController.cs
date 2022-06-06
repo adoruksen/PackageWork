@@ -50,9 +50,15 @@ public class InputHandleUiController : MonoBehaviour
 
     private void UpdateHandle(Vector2 inputPosition)
     {
+        Debug.Log("girdi");
         if (!_isActive) return;
+        Debug.Log("active");
+
         _rim.position = InputManager.Module.DownPosition;
         _handle.localPosition = InputManager.Module.NormalizedOffset * InputManager.Module.MaxOffset;
+        Debug.Log(_handle.localPosition);
+
+
     }
 
     private void HideHandle(Vector2 inputPosition)
