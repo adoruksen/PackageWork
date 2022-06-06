@@ -15,11 +15,11 @@ MonoBehaviour:
   Normalizer: {x: 1, y: 1}
   _isActive: 0
   _maxOffset: 128
-  _sensitivity: 0
+  _sensitivity: 1
   _delta: {x: 0, y: 0}
   _offset: {x: 0, y: 0}
   _normalizedDelta: {x: 0, y: 0}
   _normalizedOffset: {x: 0, y: 0}
-  _downPosition: {x: 684.31036, y: 840.1293}
-  _lastPosition: {x: 4713.362, y: 2332.112}
-  _mousePosition: {x: 4713.362, y: 2332.112}
+  _downPosition: {x: 951.6468, y: 693.20886}
+  _lastPosition: {x: 2271.8503, y: 2249.949}
+  _mousePosition: {x: 2271.8503, y: 2249.949}
