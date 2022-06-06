@@ -321,7 +321,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180234075}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -360,7 +360,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180234075}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _retryButton: {fileID: 2054184416}
-  _gameMode: {fileID: 11400000, guid: 0f84c5f0f87961a41b02bcba2ac82c1a, type: 2}
+  _gameMode: {fileID: 11400000, guid: 8dd7e33f1a047854d9b91e8b3eead310, type: 2}
 --- !u!1 &297372740
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +544,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451866012}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextButton: {fileID: 752791662}
-  _gameMode: {fileID: 11400000, guid: 0f84c5f0f87961a41b02bcba2ac82c1a, type: 2}
+  _gameMode: {fileID: 11400000, guid: 8dd7e33f1a047854d9b91e8b3eead310, type: 2}
 --- !u!1 &752791660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,7 +1678,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824761532}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -1700,7 +1700,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824761532}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
