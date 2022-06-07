@@ -5,14 +5,21 @@
 
 -Stack System
 
--Object Pooling
+-Object Pooling System
 
--Generic Singleton Class
+
+
+-----------------------------------------------------------------------------------------------------------------
+                 C# Architecture
+                 
+        -Event driven architecture
+
+        -Generic Singleton Class
+
+        -Abstract and Interfaces
 
 -----------------------------------------------------------------------------------------------------------------
                  Features
-
-        -Event driven architecture
 
         -DoTween
 
