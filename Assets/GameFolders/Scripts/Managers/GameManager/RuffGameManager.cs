@@ -117,7 +117,7 @@ public abstract class RuffGameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Call this method to record LevelStart event at UncoAnalytics and trigger events for subscribers (App.cs > SDKs).
+    /// Call this method to record LevelStart event 
     /// </summary>
     protected void LevelStart()
     {
@@ -125,7 +125,7 @@ public abstract class RuffGameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Call this method to record LevelFail event at UncoAnalytics and trigger events for subscribers (App.cs > SDKs).
+    /// Call this method to record LevelFail event 
     /// </summary>
     protected void LevelFail()
     {
@@ -133,7 +133,7 @@ public abstract class RuffGameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Call this method to record LevelComplete event at UncoAnalytics and trigger events for subscribers (App.cs > SDKs).
+    /// Call this method to record LevelComplete event 
     /// </summary>
     protected void LevelComplete()
     {
