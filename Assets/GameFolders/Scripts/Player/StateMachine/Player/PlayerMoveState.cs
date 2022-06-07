@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class PlayerMoveState : MoveState
+public class PlayerStackState : StackState
 {
     public override void OnStateFixedUpdate(PlayerController controller)
     {

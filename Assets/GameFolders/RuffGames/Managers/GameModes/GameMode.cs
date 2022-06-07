@@ -1,6 +1,8 @@
 using UnityEngine;
 using System;
+using Sirenix.OdinInspector;
 
+[InlineEditor]
 public abstract class GameMode : ScriptableObject
 {
     public abstract void InitializeGameMode();

@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
     [SerializeReference, BoxGroup("Idle", false), HorizontalGroup("Idle/Group")] public State IdleState;
-    [SerializeReference, BoxGroup("Move", false), HorizontalGroup("Move/Group")] public MoveState MoveState;
+    [SerializeReference, BoxGroup("Stack", false), HorizontalGroup("Stack/Group")] public StackState StackState;
     [SerializeReference, BoxGroup("Fnsh", false), HorizontalGroup("Fnsh/Group")] public FinishState FinishState;
     //[SerializeReference, BoxGroup("Winn", false), HorizontalGroup("Winn/Group")] public State WinState;
     //[SerializeReference, BoxGroup("Fail", false), HorizontalGroup("Fail/Group")] public State FailState;

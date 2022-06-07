@@ -29,9 +29,8 @@ public class DefaultGameMode : GameMode
         StartGame();
         void StartGame()
         {
-            Debug.Log("default game mode StartGameMode");
             CameraController.instance.SetTarget(PlayerMovement.instance.GetComponent<CameraFollowTarget>());
-            PlayerController.instance.SetState(PlayerController.instance.MoveState);
+            PlayerController.instance.SetState(PlayerController.instance.StackState);
             levelStart.Invoke();
         }
     }

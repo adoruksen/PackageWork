@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MoveState : State
+public class StackState : State
 {
     protected override void OnStateEnter(PlayerController controller)
     {

@@ -2,6 +2,7 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
+[InlineEditor]
 public abstract class InputModule : ScriptableObject
 {
     public Action<Vector2> OnMouseDown;

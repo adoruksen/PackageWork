@@ -3,6 +3,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "CameraConfig", menuName = "Game/Camera/CameraConfig", order = 0)]
+[InlineEditor]
 public class CameraConfig : ScriptableObject
 {
     public Vector3 offset;
