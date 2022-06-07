@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody Rigidbody { get; private set; }
     public PlayerMovement Movement { get; private set; }
-    //public PlayerAnimationController Animation { get; private set; }
+    public PlayerAnimationController Animation { get; private set; }
 
 
     private void Awake()
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         instance = this;
         Rigidbody = GetComponent<Rigidbody>();
         Movement = GetComponent<PlayerMovement>();
-        //Animation = GetComponent<PlayerAnimationController>();
+        Animation = GetComponent<PlayerAnimationController>();
         SetState(IdleState);
     }
 
