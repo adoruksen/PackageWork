@@ -11,6 +11,7 @@ public class GameManager : RuffGameManager
 
     [SerializeField] private GameMode _defaultGameMode;
     private GameMode _currentGameMode;
+    public Transform defaultParent;
 
     public bool isPlaying { get; private set; }
 

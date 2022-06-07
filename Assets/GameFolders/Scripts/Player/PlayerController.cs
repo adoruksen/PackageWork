@@ -3,7 +3,7 @@ using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour ,IInteractor
 {
     public static PlayerController instance;
     [SerializeReference, BoxGroup("Idle", false), HorizontalGroup("Idle/Group")] public State IdleState;
@@ -15,17 +15,26 @@ public class PlayerController : MonoBehaviour
 
 
     public Rigidbody Rigidbody { get; private set; }
+    public Interactor Interactor { get; private set; }  
     public PlayerMovement Movement { get; private set; }
     public PlayerAnimationController Animation { get; private set; }
+    public StackController StackController { get; private set; }
 
 
     private void Awake()
     {
         instance = this;
-        Rigidbody = GetComponent<Rigidbody>();
-        Movement = GetComponent<PlayerMovement>();
-        Animation = GetComponent<PlayerAnimationController>();
+        ComponentSetter();
         SetState(IdleState);
+    }
+
+    private void ComponentSetter()
+    {
+        Rigidbody = GetComponent<Rigidbody>();
+        Interactor = GetComponentInChildren<Interactor>();
+        Movement = GetComponent<PlayerMovement>();
+        StackController = GetComponent<StackController>();
+        Animation = GetComponent<PlayerAnimationController>();
     }
 
 

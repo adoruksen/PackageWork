@@ -35,12 +35,12 @@ public class CameraConfigSetter : MonoBehaviour
     private void RegisterPlayer()
     {
         _registeredCharacter = PlayerController.instance;
-        _registeredCharacter.MoveState.OnStateEntered += SetGamePlayCamera;
+        _registeredCharacter.StackState.OnStateEntered += SetGamePlayCamera;
     }
 
     private void UnregisterPlayer()
     {
-        _registeredCharacter.MoveState.OnStateEntered -= SetGamePlayCamera;
+        _registeredCharacter.StackState.OnStateEntered -= SetGamePlayCamera;
     }
 
     private void SetGamePlayCamera(PlayerController obj)
