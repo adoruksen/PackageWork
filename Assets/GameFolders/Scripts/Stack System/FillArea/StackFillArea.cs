@@ -11,5 +11,20 @@ public class StackFillArea : MonoBehaviour
     public bool Filled { get; private set; }
     public int Size => _size;
 
-    //public void Add
+    private void Awake()
+    {
+        _size = 20;
+    }
+
+    public void AddStack()
+    {
+        for (int i = 0; i < Size; i++)
+        {
+            OnAdded?.Invoke(i);
+            if (i < Size - 1) return;
+            Filled = true;
+        }
+
+    }
+
 }

@@ -27,6 +27,7 @@ public class StackFillAreaVisualController : MonoBehaviour
         if (_lastIndex >= index) return;
 
         _fillSlots[index].transform.DOScale(Vector3.one, .2f).SetEase(Ease.OutBack, 3f);
+        Debug.Log("vect1");
         _lastIndex++;
     }
 }

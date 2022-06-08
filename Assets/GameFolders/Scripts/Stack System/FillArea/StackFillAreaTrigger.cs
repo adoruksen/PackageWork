@@ -41,10 +41,7 @@ public class StackFillAreaTrigger : MonoBehaviour ,IBeginInteract,IStayInteract,
         _timer = 0f;
         stackController.UseStack();
 
-        //_fillArea.AddStack(controller);
+        _fillArea.AddStack();
         if (_fillArea.Filled) IsInteractable = false;
-        {
-
-        }
     }
 }
