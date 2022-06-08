@@ -19,6 +19,7 @@ public class StackController : MonoBehaviour
     public void UseStack()
     {
         Stack--;
+        Debug.Log("UseStack()");
         OnStackUsed?.Invoke();
     }
 

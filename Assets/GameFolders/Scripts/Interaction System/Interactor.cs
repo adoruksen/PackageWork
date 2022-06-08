@@ -28,11 +28,9 @@ public class Interactor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("enter");
         if (!canInteract || !GameManager.instance.isPlaying) return;
         if (!other.CompareTag(tag)) return; //objeye herhangi bir tag verilmemiþse dön
 
-        Debug.Log("carpýsma var");
         var hasStayInteractable = other.TryGetComponent<IStayInteract>(out var stayInteract);
         if (hasStayInteractable && stayInteract.IsInteractable) _stayInteractables.Add(stayInteract);
 
