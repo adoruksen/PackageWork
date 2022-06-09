@@ -12,8 +12,8 @@ public class CharacterController : MonoBehaviour ,IInteractor ,IHaveTeam
     [SerializeReference, BoxGroup("Enter", false), HorizontalGroup("Enter/Group")] public EnterVehicleState EnterVehicleState;
     [SerializeReference, BoxGroup("Exit", false), HorizontalGroup("Exit/Group")] public ExitVehicleState ExitVehicleState;
     [SerializeReference, BoxGroup("Finish", false), HorizontalGroup("Finish/Group")] public FinishState FinishState;
-    //[SerializeReference, BoxGroup("Winn", false), HorizontalGroup("Winn/Group")] public State WinState;
-    //[SerializeReference, BoxGroup("Fail", false), HorizontalGroup("Fail/Group")] public State FailState;
+    [SerializeReference, BoxGroup("Winn", false), HorizontalGroup("Winn/Group")] public State WinState;
+    [SerializeReference, BoxGroup("Fail", false), HorizontalGroup("Fail/Group")] public State FailState;
     [ShowInInspector, ReadOnly, BoxGroup("States", false)] public State CurrentState { get; private set; }
 
     public event Action<Team> OnTeamChanged;

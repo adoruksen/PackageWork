@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
-public class DriveLevelPart : MonoBehaviour
+[Serializable]
+public class DriveLevelPart : LevelPart
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private DriveAreaManager _driveArea;
+    public override GameAreaManager SetupPart(Transform parent, GameAreaManager previousArea = null)
     {
-        
+        var manager = Object.Instantiate(_driveArea, parent);
+        if (previousArea == null) return manager;
+
+        var position = previousArea.GetNextAreaPosition();
+        manager.MoveArea(position);
+        return manager;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
