@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
-    public static PlayerMovement instance;
+    public static CharacterMovement instance;
     private Rigidbody _rigidbody;
     public Transform Target;
 
     public float MoveSpeed;
     public bool IsActive;
 
-    //public bool UseBounds;
-    //public Bounds Bounds;
+    public bool UseBounds;
+    public Bounds Bounds;
 
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
         var movement = direction * MoveSpeed;
         _rigidbody.velocity = movement;
-        //if (UseBounds) _rigidbody.position = Bounds.ClosestPoint(_rigidbody.position);
+        if (UseBounds) _rigidbody.position = Bounds.ClosestPoint(_rigidbody.position);
     }
 
     public void MoveTo(Vector3 target)

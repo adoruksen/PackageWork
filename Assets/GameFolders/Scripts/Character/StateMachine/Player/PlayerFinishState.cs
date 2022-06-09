@@ -7,12 +7,12 @@ public class PlayerFinishState : FinishState
     [SerializeField] private float _jumpDistance;
     private bool _jumped;
 
-    protected override void OnStateEnter(PlayerController controller)
+    protected override void OnStateEnter(CharacterController controller)
     {
         _jumped = false;
     }
 
-    public override void OnStateFixedUpdate(PlayerController controller)
+    public override void OnStateFixedUpdate(CharacterController controller)
     {
         if (_jumped) return;
 

@@ -6,7 +6,7 @@ public class CameraConfigSetter : MonoBehaviour
     [SerializeField] private CameraConfig gameplayConfig;
     [SerializeField] private CameraConfig finishConfig;
 
-    public PlayerController _registeredCharacter;
+    public CharacterController _registeredCharacter;
 
     private void OnEnable()
     {
@@ -34,7 +34,7 @@ public class CameraConfigSetter : MonoBehaviour
 
     private void RegisterPlayer()
     {
-        _registeredCharacter = PlayerController.instance;
+        _registeredCharacter = CharacterController.instance;
         _registeredCharacter.StackState.OnStateEntered += SetGamePlayCamera;
     }
 
@@ -43,7 +43,7 @@ public class CameraConfigSetter : MonoBehaviour
         _registeredCharacter.StackState.OnStateEntered -= SetGamePlayCamera;
     }
 
-    private void SetGamePlayCamera(PlayerController obj)
+    private void SetGamePlayCamera(CharacterController obj)
     {
         CameraController.instance.SetConfig(gameplayConfig);
     }

@@ -18,8 +18,8 @@ public class GameAreaManager : MonoBehaviour
         return _nextAreaPlacer.position;
     }
 
-    public virtual void OnPlayerEntered(PlayerController player) { }
-    public virtual void OnPlayerExited(PlayerController player) { }
+    public virtual void OnCharacterEntered(CharacterController character) { }
+    public virtual void OnCharacterExited(CharacterController character) { }
 
     private void OnDrawGizmosSelected()
     {

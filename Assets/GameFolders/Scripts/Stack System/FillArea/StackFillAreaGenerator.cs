@@ -35,7 +35,7 @@ public class StackFillAreaGenerator : MonoBehaviour
         var vehiclePosition = fillArea.transform.position + Vector3.forward * 14;
         var vehicle = Object.Instantiate(vehicleData.Vehicle, vehiclePosition, Quaternion.identity, GameManager.instance.defaultParent);
         var fillVisual = fillArea.GetComponent<StackFillAreaVisualController>();
-        var fillTrigger = fillArea.GetComponent<PlayerDriveStateTrigger>();
+        var fillTrigger = fillArea.GetComponent<CharacterDriveStateTrigger>();
 
         var rows = vehicleData.Cost / _rowStackAmount;
         var offset = Vector3.left * (.5f * (rows - 1));
@@ -82,5 +82,25 @@ public class StackFillAreaGenerator : MonoBehaviour
         fillVisual.SetFillObjects(fillObjects.ToArray());
     }
 
-    private void GenerateFillTrigger()
+    private void GenerateFillTrigger(CharacterDriveStateTrigger fillTrigger, VehicleController vehicle)
+    {
+        fillTrigger.SetVehicle(vehicle);
+    }
+
+    private void GenerateWalls(Transform parent,int areaCount)
+    {
+        if (areaCount >= 3) return;
+
+        var size = (24 - (areaCount * _fillAreaWidth)) / 2;
+        var position = 12 - size / 2;
+        SpawnWall(parent, Vector3.left * position, size);
+        SpawnWall(parent, Vector3.right * position, size);
+    }
+
+    private void SpawnWall(Transform parent, Vector3 wallPosition , float wallScale)
+    {
+        var wall = Object.Instantiate(_wall, parent);
+        wall.localPosition = wallPosition;
+        wall.localScale = new Vector3(wallScale, 1f, 1f);
+    }
 }

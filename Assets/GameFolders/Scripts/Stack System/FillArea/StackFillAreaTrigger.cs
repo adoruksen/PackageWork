@@ -16,7 +16,7 @@ public class StackFillAreaTrigger : MonoBehaviour ,IBeginInteract,IStayInteract,
 
     public void OnInteractBegin(IInteractor interactor)
     {
-        var controller = (PlayerController)interactor;
+        var controller = (CharacterController)interactor;
         AddStack(controller);
     }
 
@@ -25,23 +25,24 @@ public class StackFillAreaTrigger : MonoBehaviour ,IBeginInteract,IStayInteract,
         _timer += Time.fixedDeltaTime;
         if (_timer <= _cooldown) return;
 
-        var controller = (PlayerController)interactor;
+        var controller = (CharacterController)interactor;
         AddStack(controller);
     }
 
     public void OnInteractEnd(IInteractor interactor)
     {
-        var controller = (PlayerController)interactor;
+        var controller = (CharacterController)interactor;
+        controller.Bumper.isActive = true;
     }
 
-    private void AddStack(PlayerController controller)
+    private void AddStack(CharacterController controller)
     {
         var stackController = controller.GetComponent<StackController>();
         if (stackController.Stack <= 0) return;
         _timer = 0f;
         stackController.UseStack();
 
-        _fillArea.AddStack();
+        _fillArea.AddStack(controller.Team);
         if (_fillArea.Filled) IsInteractable = false;
     }
 }

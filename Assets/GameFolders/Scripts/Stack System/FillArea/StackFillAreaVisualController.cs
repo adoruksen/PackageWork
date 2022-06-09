@@ -22,12 +22,16 @@ public class StackFillAreaVisualController : MonoBehaviour
         _fillArea.OnAdded -= UpdateGrid;
     }
 
-    private void UpdateGrid(int index)
+    private void UpdateGrid(int index,Team team)
     {
+        _fillSlots[index].AssignTeam(team);
         if (_lastIndex >= index) return;
-
         _fillSlots[index].transform.DOScale(Vector3.one, .2f).SetEase(Ease.OutBack, 3f);
-        Debug.Log("vect1");
         _lastIndex++;
+    }
+
+    public void SetFillObjects(FillObject[] fillSlots)
+    {
+        _fillSlots = fillSlots;
     }
 }

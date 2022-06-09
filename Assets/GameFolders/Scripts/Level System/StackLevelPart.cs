@@ -16,7 +16,7 @@ public class StackLevelPart : LevelPart
             manager.MoveArea(position);
         }
 
-        manager.InitializeStackArea(Vehicles);
+        manager.InitializeStackArea(vehicles);
         return manager;
     }
 }

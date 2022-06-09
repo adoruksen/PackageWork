@@ -18,7 +18,7 @@ public class StackAreaManager : GameAreaManager
     [SerializeField] private float _waitDelay;
     private WaitForSeconds _wait;
     private List<StackFillArea> _activeFillAreas;
-    private List<BrickSpawner> _brickRespawners;
+    private List<BrickRespawner> _brickRespawners;
 
     private void Awake()
     {
@@ -32,23 +32,23 @@ public class StackAreaManager : GameAreaManager
     {
         _grid.InitializeGrid();
         _activeFillAreas = _fillAreaGenerator.Generate(_fillAreaPlacer, vehicles);
-        _brickRespawners = new List<BrickSpawner>();
+        _brickRespawners = new List<BrickRespawner>();
         for (var i = 0; i < _activeFillAreas.Count; i++)
         {
-            _brickRespawners.Add(new BrickSpawner(this, _activeFillAreas[i]));
+            _brickRespawners.Add(new BrickRespawner(this, _activeFillAreas[i]));
         }
     }
 
-    public override void OnPlayerEntered(PlayerController player)
+    public override void OnCharacterEntered(CharacterController player)
     {
         AddTeam(player.Team);
         if (!GameManager.instance.isPlaying) return;
 
         player.SetState(player.StackState);
-        player.Bumper.IsActive = true;
+        player.Bumper.isActive = true;
     }
 
-    public override void OnPlayerExited(PlayerController player)
+    public override void OnCharacterExited(CharacterController player)
     {
         RemoveTeam(player.Team);
         CheckFail();
@@ -112,7 +112,7 @@ public class StackAreaManager : GameAreaManager
     public void SpawnBrick(Team team)
     {
         var emptySlots = _grid.GetEmptySlotIndices();
-        if(emptySlots.Count <= 0) || _teams.Count <=0) return;
+        if(emptySlots.Count <= 0 || _teams.Count <=0) return;
 
         var slotIndex = Random.Range(0, emptySlots.Count);
         var brick = BrickManager.instance.SpawnObject(team);
