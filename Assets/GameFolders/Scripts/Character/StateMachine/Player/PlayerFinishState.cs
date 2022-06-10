@@ -23,13 +23,13 @@ public class PlayerFinishState : FinishState
             return;
         }
 
-        //JumpToPodiumSequence(controller);
+        JumpToPodiumSequence(controller);
     }
 
-    //private void JumpToPodiumSequence(PlayerController controller)
-    //{
-    //    _jumped = true;
-    //    controller.Rigidbody.DOJump(controller.Movement.Target.position, 2f, 1, .5f)
-    //                        .OnComplete(() => FinishManager.Instance.FinishLevel());
-    //}
+    private void JumpToPodiumSequence(CharacterController controller)
+    {
+        _jumped = true;
+        controller.Rigidbody.DOJump(controller.Movement.Target.position, 2f, 1, .5f)
+                            .OnComplete(() => FinishManager.instance.FinishLevel());
+    }
 }

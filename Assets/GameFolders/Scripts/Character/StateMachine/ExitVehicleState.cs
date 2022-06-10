@@ -1,18 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
+using DG.Tweening;
 
-public class ExitVehicleState : MonoBehaviour
+[Serializable]
+public class ExitVehicleState : State
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool _jumpingOut;
+
+    protected override void OnStateEnter(CharacterController controller)
     {
-        
+        _jumpingOut = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnStateFixedUpdate(CharacterController controller)
     {
-        
+        if (_jumpingOut) return;
+        controller.vehicle.Movement.Steer(0);
+
+        if (controller.vehicle.Movement.CurrentSpeed > .1f) return;
+
+        _jumpingOut = true;
+        PlayExitSequence(controller);
+    }
+
+    private static void PlayExitSequence(CharacterController controller)
+    {
+        controller.vehicle.Seat.RemoveCharacter();
+        controller.ExitVehicle().OnComplete(controller.ExitState);
     }
 }

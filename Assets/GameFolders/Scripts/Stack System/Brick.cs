@@ -13,7 +13,7 @@ public class Brick : MonoBehaviour ,IBeginInteract,IHaveTeam
     [SerializeField] private float _verticalForce;
     [SerializeField] private float _horizontalForce;
 
-    [ShowInInspector,ReadOnly] public bool IsInteractable { get;private set; } = true;
+    [ShowInInspector,ReadOnly] public bool IsInteractable { get;private set;}
 
     public Team Team => _team;
     [SerializeField, DisableInPlayMode] private Team _team;
