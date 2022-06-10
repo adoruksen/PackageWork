@@ -18,7 +18,7 @@
 -----------------------------------------------------------------------------------------------------------------
                  C# Architecture
                  
-        -Event driven architecture (observer pattern)
+        -Event Driven Architecture (observer pattern)
 
         -Generic Singleton Class (singleton pattern)
 
