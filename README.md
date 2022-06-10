@@ -11,6 +11,8 @@
 
 -State Machine Pattern
 
+-Artifical Intelligence
+
 
 
 -----------------------------------------------------------------------------------------------------------------
@@ -20,7 +22,9 @@
 
         -Generic Singleton Class (singleton pattern)
 
-        -Abstract and Interfaces
+        -Abstract and Interfaces (Inheritance)
+        
+        -Polymorphism and Encapsulation
 
 -----------------------------------------------------------------------------------------------------------------
                  Features
