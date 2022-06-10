@@ -150,5 +150,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameplayConfig: {fileID: 11400000, guid: 48c314e6713c6204bbd7c1b8cbd8f628, type: 2}
+  driveConfig: {fileID: 11400000, guid: 70aadc1ae5f24b54e8905521eca26240, type: 2}
   finishConfig: {fileID: 11400000, guid: 57b37c6595c387c4ea0f2ee5223ceecc, type: 2}
-  _registeredCharacter: {fileID: 0}

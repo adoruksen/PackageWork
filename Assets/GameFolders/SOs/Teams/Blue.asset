@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90754074b95fafc47b51723932853692, type: 3}
-  m_Name: introConfig
+  m_Script: {fileID: 11500000, guid: 32c186c51f4aed44abe9f66ac06c3404, type: 3}
+  m_Name: Blue
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 20, z: -20}
-  rotation: 0
+  _characterColor: {r: 0, g: 0.04815674, b: 1, a: 0}
+  _vehicleColor: {r: 0.024959564, g: 0, b: 1, a: 0}
+  _rockColor: {r: 0, g: 0.15980244, b: 1, a: 0}
+  _brickColor: {r: 0, g: 0.14668608, b: 1, a: 0}

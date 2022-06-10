@@ -1,12 +1,12 @@
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class CameraConfigSetter : MonoBehaviour
 {
     [SerializeField] private CameraConfig gameplayConfig;
+    [SerializeField] private CameraConfig driveConfig;
     [SerializeField] private CameraConfig finishConfig;
 
-    public CharacterController _registeredCharacter;
+    private CharacterController _registeredCharacter;
 
     private void OnEnable()
     {
@@ -34,18 +34,25 @@ public class CameraConfigSetter : MonoBehaviour
 
     private void RegisterPlayer()
     {
-        _registeredCharacter = CharacterController.instance;
+        _registeredCharacter = CharacterManager.instance.player;
         _registeredCharacter.StackState.OnStateEntered += SetGamePlayCamera;
+        _registeredCharacter.DriveState.OnStateEntered += SetDriveCamera;
     }
 
     private void UnregisterPlayer()
     {
         _registeredCharacter.StackState.OnStateEntered -= SetGamePlayCamera;
+        _registeredCharacter.DriveState.OnStateEntered -= SetDriveCamera;
+
     }
 
     private void SetGamePlayCamera(CharacterController obj)
     {
         CameraController.instance.SetConfig(gameplayConfig);
+    }
+    private void SetDriveCamera(CharacterController obj)
+    {
+        CameraController.instance.SetConfig(driveConfig);
     }
 
     private void SetFinishCamera()

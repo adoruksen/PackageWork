@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 8225616802313860490}
   - component: {fileID: 414675512603390629}
   - component: {fileID: 5278042884204529153}
+  - component: {fileID: 363129914169832478}
   m_Layer: 6
   m_Name: TopRock
   m_TagString: Untagged
@@ -197,6 +198,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &363129914169832478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3014192240140175658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4501272aac22f3408194111c7a81c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _indices: 00000000
+  _renderer: {fileID: 5278042884204529153}
 --- !u!1 &8849108929240899145
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,6 +224,7 @@ GameObject:
   - component: {fileID: 6808971453913548966}
   - component: {fileID: 311485538735712533}
   - component: {fileID: 7855953705187941024}
+  - component: {fileID: 5424324677082147399}
   m_Layer: 6
   m_Name: BottomRock
   m_TagString: Untagged
@@ -295,3 +311,17 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 1
   m_Center: {x: -0.05, y: 1, z: 0}
+--- !u!114 &5424324677082147399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8849108929240899145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4501272aac22f3408194111c7a81c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _indices: 00000000
+  _renderer: {fileID: 311485538735712533}

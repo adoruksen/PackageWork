@@ -31,6 +31,37 @@ Transform:
   m_Father: {fileID: 3694564366267763325}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &393630758713906073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3625310350856378805}
+  m_Layer: 0
+  m_Name: RockPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3625310350856378805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393630758713906073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3694564366267763325}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1167577053765670586
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +91,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3694564366267763325}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3694564366267763327
 GameObject:
@@ -73,8 +104,11 @@ GameObject:
   - component: {fileID: 3694564366267763325}
   - component: {fileID: 3694564366267763326}
   - component: {fileID: 1116982864661374271}
+  - component: {fileID: 5723819880831281471}
+  - component: {fileID: 8241077152970552770}
   - component: {fileID: 3694564366267763315}
   - component: {fileID: 5467362565747052003}
+  - component: {fileID: 8805000082892652159}
   - component: {fileID: 3694564366267763314}
   m_Layer: 0
   m_Name: GameManager
@@ -96,6 +130,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5119397315983527067}
+  - {fileID: 3625310350856378805}
   - {fileID: 7534141838208926219}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -132,6 +167,31 @@ MonoBehaviour:
   _spacing: -4
   player: {fileID: 0}
   _playerIndex: 1
+--- !u!114 &5723819880831281471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694564366267763327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f214b569aa933146b026c68edb929c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: {fileID: 0}
+--- !u!114 &8241077152970552770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694564366267763327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c95fa25d50826cf46ba0271906ba4fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3694564366267763315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +219,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 393022886202557097, guid: 2e87fd4199c80ea45b2260ad7cbf80f8, type: 3}
   poolParent: {fileID: 5119397315983527067}
+--- !u!114 &8805000082892652159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694564366267763327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4135502b0371c3a4db0bafb0a123a9cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 0}
+  poolParent: {fileID: 0}
 --- !u!114 &3694564366267763314
 MonoBehaviour:
   m_ObjectHideFlags: 0
