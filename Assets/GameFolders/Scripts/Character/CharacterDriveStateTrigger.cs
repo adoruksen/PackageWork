@@ -9,7 +9,7 @@ public class CharacterDriveStateTrigger : MonoBehaviour
     private void Awake()
     {
         _fillArea = GetComponent<StackFillArea>();
-        _stackArea = GetComponent<GameAreaManager>();
+        _stackArea = GetComponentInParent<GameAreaManager>();
     }
 
     private void OnEnable()

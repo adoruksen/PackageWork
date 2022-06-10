@@ -32,20 +32,19 @@ public class CharacterController : MonoBehaviour ,IInteractor ,IHaveTeam
     private void Awake()
     {
         instance = this;
-        ComponentSetter();
-        SetState(IdleState);
-    }
-
-    private void ComponentSetter()
-    {
         Rigidbody = GetComponent<Rigidbody>();
         Interactor = GetComponentInChildren<Interactor>();
         Bumper = GetComponent<CharacterBumpController>();
         Movement = GetComponent<CharacterMovement>();
         StackController = GetComponent<StackController>();
         Animation = GetComponent<CharacterAnimationController>();
+        SetState(IdleState);
     }
 
+    private void Start()
+    {
+        if (Team != null) OnTeamChanged?.Invoke(Team);
+    }
 
     private void FixedUpdate()
     {
