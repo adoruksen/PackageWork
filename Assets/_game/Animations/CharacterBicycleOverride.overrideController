@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CharacterBicycleOverride
+  m_Controller: {fileID: 9100000, guid: a11754aded4239048a768134d0162f1c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -6519760567115542380, guid: cb14b0980251dc04e97221ec30d6e4e4, type: 3}
+    m_OverrideClip: {fileID: -8053833243640909916, guid: cb14b0980251dc04e97221ec30d6e4e4, type: 3}
