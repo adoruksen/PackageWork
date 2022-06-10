@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e17ead84ef87ae4aae789ebe975afa4, type: 3}
   m_Name: DefaultGameMode
   m_EditorClassIdentifier: 
+  levels:
+  - {fileID: 11400000, guid: a5c9e7fef55e7ad489a36c36f8012390, type: 2}
   _introConfig: {fileID: 11400000, guid: 937e4684efd7e904185daf1bad96e828, type: 2}
   _playCameraAnimation: 0
   _cameraAnimationSpeed: 192

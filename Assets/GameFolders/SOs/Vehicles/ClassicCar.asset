@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92a0d2fa4d5ac34f8d9ee1d9222f443, type: 3}
   m_Name: ClassicCar
   m_EditorClassIdentifier: 
-  _vehicle: {fileID: 0}
+  _vehicle: {fileID: 462191357558296, guid: f59e9149c159b04498650fe2b780fe8a, type: 3}
   _cost: 20
   asphaltStats:
     _maxSpeed: 25

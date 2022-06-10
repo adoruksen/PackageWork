@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class AiBreakRockState : SubState<AiStackState>
 {
     [SerializeField] private float _maxDistance;

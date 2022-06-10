@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+[Serializable]
 public class AiSelectTargetState : SubState<AiStackState>
 {
     [SerializeField] private float _brickChance;

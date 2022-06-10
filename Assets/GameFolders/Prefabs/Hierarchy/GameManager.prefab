@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 3694564366267763315}
   - component: {fileID: 5467362565747052003}
   - component: {fileID: 8805000082892652159}
+  - component: {fileID: 3380789274533962513}
   - component: {fileID: 3694564366267763314}
   m_Layer: 0
   m_Name: GameManager
@@ -162,8 +163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79735320169e39e43a4bde15cd51aa6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerCharacter: {fileID: 0}
-  _aiCharacter: {fileID: 0}
+  _playerCharacter: {fileID: 438969833018339491, guid: 111c695dfe1fefb458a155534b4b193b,
+    type: 3}
+  _aiCharacter: {fileID: 3000809827678892832, guid: 271415dffcaefc84ea6bffb5e406ac5c,
+    type: 3}
   _spacing: -4
   player: {fileID: 0}
   _playerIndex: 1
@@ -217,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8064e5c3b0f6844884b56e16ef44ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 393022886202557097, guid: 2e87fd4199c80ea45b2260ad7cbf80f8, type: 3}
+  obj: {fileID: 856051214388475361, guid: 3f2eae9342da3e242b06609d5cb40bba, type: 3}
   poolParent: {fileID: 5119397315983527067}
 --- !u!114 &8805000082892652159
 MonoBehaviour:
@@ -231,8 +234,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4135502b0371c3a4db0bafb0a123a9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 0}
-  poolParent: {fileID: 0}
+  obj: {fileID: 1086440178124406922, guid: d2701ddaad0f9094c84346e10ea1e8b8, type: 3}
+  poolParent: {fileID: 3625310350856378805}
+--- !u!114 &3380789274533962513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694564366267763327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15f5e1771ef10a47ac43018eacc3ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterMaterial: {fileID: 2100000, guid: fea008e97a2af9b48ad7f5240899cca3, type: 2}
+  _vehicleMaterial: {fileID: 2100000, guid: 11d17fd7df8283d4ca33245e0cf9b89a, type: 2}
+  _brickMaterial: {fileID: 2100000, guid: 767c1a63fdcc5884092fc35bdbc20dc7, type: 2}
+  _rockMaterial: {fileID: 2100000, guid: e9d441a6bb99afd48a51a464d932861b, type: 2}
 --- !u!114 &3694564366267763314
 MonoBehaviour:
   m_ObjectHideFlags: 0

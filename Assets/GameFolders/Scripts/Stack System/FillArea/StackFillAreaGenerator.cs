@@ -4,7 +4,7 @@ using UnityEngine;
 using Object = UnityEngine.Object;
 
 [Serializable]
-public class StackFillAreaGenerator : MonoBehaviour
+public class StackFillAreaGenerator
 {
     [SerializeField] private Transform _rail;
     [SerializeField] private StackFillArea _fillArea;

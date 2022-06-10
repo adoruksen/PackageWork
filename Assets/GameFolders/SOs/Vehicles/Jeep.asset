@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92a0d2fa4d5ac34f8d9ee1d9222f443, type: 3}
   m_Name: Jeep
   m_EditorClassIdentifier: 
-  _vehicle: {fileID: 0}
+  _vehicle: {fileID: 1664575051551879214, guid: 46ecd22240b8dac41be277a23d082633,
+    type: 3}
   _cost: 20
   asphaltStats:
     _maxSpeed: 20

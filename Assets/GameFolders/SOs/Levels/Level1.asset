@@ -16,12 +16,57 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d268fdfc7a234434cb77a4d536f5a1c7, type: 2}
   - {fileID: 11400000, guid: b71f9b9796ef2c94980ffe784bdab081, type: 2}
   Parts:
-  - rid: 4701928672039010304
+  - rid: 4701928672039010323
+  - rid: 4701928672039010324
+  - rid: 4701928672039010325
+  - rid: 4701928672039010326
+  - rid: 4701928672039010327
+  - rid: 4701928672039010328
+  - rid: 4701928672039010329
   references:
     version: 2
     RefIds:
-    - rid: 4701928672039010304
+    - rid: 4701928672039010323
       type: {class: StackLevelPart, ns: , asm: Assembly-CSharp}
       data:
-        _manager: {fileID: 0}
-        vehicles: []
+        _manager: {fileID: 1557189618597305093, guid: 56c147227cb81d04aa8a30cbed68ee4f,
+          type: 3}
+        vehicles:
+        - {fileID: 11400000, guid: a013333beacd6674bbbcde0be26d24b9, type: 2}
+        - {fileID: 11400000, guid: 3882fa6ff5837e143b9424beff469725, type: 2}
+    - rid: 4701928672039010324
+      type: {class: DriveLevelPart, ns: , asm: Assembly-CSharp}
+      data:
+        _driveArea: {fileID: 4949460756662454570, guid: 6a1d7011e71813b4fb543983233fdc32,
+          type: 3}
+    - rid: 4701928672039010325
+      type: {class: StackLevelPart, ns: , asm: Assembly-CSharp}
+      data:
+        _manager: {fileID: 1557189618597305093, guid: 56c147227cb81d04aa8a30cbed68ee4f,
+          type: 3}
+        vehicles:
+        - {fileID: 11400000, guid: 3882fa6ff5837e143b9424beff469725, type: 2}
+        - {fileID: 11400000, guid: a013333beacd6674bbbcde0be26d24b9, type: 2}
+    - rid: 4701928672039010326
+      type: {class: DriveLevelPart, ns: , asm: Assembly-CSharp}
+      data:
+        _driveArea: {fileID: 4764081633705015964, guid: 5d3feb9ea8b034e489214dceec1f291b,
+          type: 3}
+    - rid: 4701928672039010327
+      type: {class: StackLevelPart, ns: , asm: Assembly-CSharp}
+      data:
+        _manager: {fileID: 1557189618597305093, guid: 56c147227cb81d04aa8a30cbed68ee4f,
+          type: 3}
+        vehicles:
+        - {fileID: 11400000, guid: 3882fa6ff5837e143b9424beff469725, type: 2}
+        - {fileID: 11400000, guid: a013333beacd6674bbbcde0be26d24b9, type: 2}
+    - rid: 4701928672039010328
+      type: {class: DriveLevelPart, ns: , asm: Assembly-CSharp}
+      data:
+        _driveArea: {fileID: 8104769911906970738, guid: 4b3d0054c864aad4f9aa31097092deed,
+          type: 3}
+    - rid: 4701928672039010329
+      type: {class: FinishLevelPart, ns: , asm: Assembly-CSharp}
+      data:
+        _finishArea: {fileID: 1305876235847781297, guid: 64c4f3d373d211a47b95f00ea8b02a93,
+          type: 3}
