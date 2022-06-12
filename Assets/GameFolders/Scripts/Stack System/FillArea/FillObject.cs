@@ -9,7 +9,7 @@ public class FillObject : MonoBehaviour, IHaveTeam
 
     public void AssignTeam(Team team)
     {
-        if (team = Team) return;
+        if (team == Team) return;
         
         Team = team;
         OnTeamChanged?.Invoke(Team);
