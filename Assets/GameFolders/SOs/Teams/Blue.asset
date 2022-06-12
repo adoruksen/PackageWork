@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c186c51f4aed44abe9f66ac06c3404, type: 3}
   m_Name: Blue
   m_EditorClassIdentifier: 
-  _characterColor: {r: 0, g: 0.04815674, b: 1, a: 0}
-  _vehicleColor: {r: 0.024959564, g: 0, b: 1, a: 0}
-  _rockColor: {r: 0, g: 0.15980244, b: 1, a: 0}
-  _brickColor: {r: 0, g: 0.14668608, b: 1, a: 0}
+  _characterColor: {r: 0, g: 0.56078434, b: 1, a: 0}
+  _vehicleColor: {r: 0.09803922, g: 0.5568628, b: 0.9137255, a: 0}
+  _rockColor: {r: 0, g: 0.43137255, b: 1, a: 0}
+  _brickColor: {r: 0.33333334, g: 0.70980394, b: 1, a: 0}

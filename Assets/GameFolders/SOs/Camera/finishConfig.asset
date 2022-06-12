@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90754074b95fafc47b51723932853692, type: 3}
   m_Name: finishConfig
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0, z: -1}
-  rotation: 0
+  offset: {x: 0, y: 10, z: -15}
+  rotation: 25
