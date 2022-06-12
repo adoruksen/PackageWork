@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+[Serializable]
 public class AiDriveState : DriveState
 {
     [SerializeField] private float _noiseWeight;
@@ -27,7 +28,7 @@ public class AiDriveState : DriveState
         var origin = controller.Rigidbody.position;
         var value = 0f;
         var delta = 2 / (_rayCount - 1f);
-        for (var i = -1f; i <=1f ; i+= delta)
+        for (var i = -1f; i <= 1f; i += delta)
         {
             var angle = i * _angle * Mathf.Deg2Rad;
             var direction = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle));
