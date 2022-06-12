@@ -4,7 +4,7 @@ using UnityEngine;
 public class StackFillAreaVisualController : MonoBehaviour
 {
     private StackFillArea _fillArea;
-    [SerializeField] private FillObject[] _fillSlots;
+    private FillObject[] _fillSlots;
     private int _lastIndex = -1;
 
     private void Awake()

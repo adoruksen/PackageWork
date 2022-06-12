@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3478365741637378220}
   - component: {fileID: 3478365741637378221}
   - component: {fileID: 3667015687178986189}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: _BaseVehicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

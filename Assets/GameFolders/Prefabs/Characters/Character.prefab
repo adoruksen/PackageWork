@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 3000809828214069615}
   - component: {fileID: 3000809828214069614}
   - component: {fileID: 3000809828214069609}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: RockBreaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}

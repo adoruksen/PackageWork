@@ -18,7 +18,6 @@ public class AiDriveState : DriveState
         controller.vehicle.Movement.Accelerate();
         var direction = GetDirection(controller) * _obstacleWeight;
         direction += (Mathf.PerlinNoise(Time.fixedTime * _noiseSpeed, 0f) * 2 - 1) * _noiseWeight;
-        Debug.Log($"perlin noise = {Mathf.PerlinNoise(Time.fixedTime * _noiseSpeed, 0f)}, ve noiseSpeed={_noiseSpeed}, ve noiseSpeedxFixedTime{Time.fixedTime*_noiseSpeed}");
         direction = Mathf.Clamp(direction, -1f, 1f);
         controller.vehicle.Movement.Steer(direction);
     }
