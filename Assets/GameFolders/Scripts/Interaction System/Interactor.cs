@@ -29,24 +29,24 @@ public class Interactor : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!canInteract || !GameManager.instance.isPlaying) return;
-        if (!other.CompareTag(tag)) return; //objeye herhangi bir tag verilmemiþse dön
+        if (!other.CompareTag(tag)) return;
 
         var hasStayInteractable = other.TryGetComponent<IStayInteract>(out var stayInteract);
         if (hasStayInteractable && stayInteract.IsInteractable) _stayInteractables.Add(stayInteract);
 
-        var hasEndInteractable = other.TryGetComponent<IBeginInteract>(out var interactable);
-        if (hasEndInteractable && interactable.IsInteractable) interactable.OnInteractBegin(_controller);
+        var hasBeginInteractable = other.TryGetComponent<IBeginInteract>(out var interactable);
+        if (hasBeginInteractable && interactable.IsInteractable) interactable.OnInteractBegin(_controller);
     }
     private void OnTriggerExit(Collider other)
     {
         if (!canInteract || !GameManager.instance.isPlaying) return;
-        if (!other.CompareTag(tag)) return; //objeye herhangi bir tag verilmemiþse dön
+        if (!other.CompareTag(tag)) return;
 
         var hasStayInteractable = other.TryGetComponent<IStayInteract>(out var stayInteract);
         if (hasStayInteractable && _stayInteractables.Contains(stayInteract))
             _stayInteractables.Remove(stayInteract);
 
-        var hasEndInteractable = other.TryGetComponent<IEndInteract>(out var endInteract);
-        if (hasEndInteractable && endInteract.IsInteractable) endInteract.OnInteractEnd(_controller);
+        var hasEndInteractable = other.TryGetComponent<IEndInteract>(out var interactable);
+        if (hasEndInteractable && interactable.IsInteractable) interactable.OnInteractEnd(_controller);
     }
 }

@@ -20,6 +20,8 @@ public class GridObject : MonoBehaviour
     protected void RemoveFromGrid()
     {
         if (!IsInGrid) return;
+
+        OnGridObjectUsed.Invoke();
         IsInGrid = false;
     }
 }

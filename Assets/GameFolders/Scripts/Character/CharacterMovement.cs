@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public static CharacterMovement instance;
     private Rigidbody _rigidbody;
     public Transform Target;
 
@@ -14,7 +13,6 @@ public class CharacterMovement : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
         _rigidbody = GetComponent<Rigidbody>();
     }
 

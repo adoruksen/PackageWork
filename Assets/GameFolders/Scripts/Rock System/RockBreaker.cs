@@ -28,11 +28,30 @@ public class RockBreaker : MonoBehaviour
     {
         if (_focusedRocks.Count <= 0) return;
 
+        _animatorController.TriggerMine();
+        DOVirtual.DelayedCall(_animationHitDelay, HitRock, false);
+        _timer = 0f;
+    }
+
+    private void HitRock()
+    {
+        if (_focusedRocks.Count <= 0) return;
+
         _focusedRocks[0].Hit();
         if (_focusedRocks[0].Health <= 0) _focusedRocks.RemoveAt(0);
     }
 
     private void OnTriggerEnter(Collider other)
+    {
+        var isRock = other.TryGetComponent<Rock>(out var rock);
+        if (!isRock) return;
+
+        if (rock.Team != _controller.Team) return;
+
+        _focusedRocks.Add(rock);
+    }
+
+    private void OnTriggerExit(Collider other)
     {
         var isRock = other.TryGetComponent<Rock>(out var rock);
         if (!isRock) return;

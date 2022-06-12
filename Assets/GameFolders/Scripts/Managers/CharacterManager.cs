@@ -24,11 +24,11 @@ public class CharacterManager : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.OnLevelStart += StartCharacters;
+        RuffGameManager.OnLevelStart += StartCharacters;
     }
     private void OnDisable()
     {
-        GameManager.OnLevelStart -= StartCharacters;
+        RuffGameManager.OnLevelStart -= StartCharacters;
     }
 
     public void SpawnCharacters(Team[] teams)

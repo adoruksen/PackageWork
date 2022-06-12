@@ -33,7 +33,7 @@ public class AiSelectTargetState : SubState<AiStackState>
     {
         var chance = Random.value;
         var min = 0f;
-        if (chance> min + _brickChance)
+        if (chance < min + _brickChance)
         {
             baseState.SetState(baseState.collectState);
             return;

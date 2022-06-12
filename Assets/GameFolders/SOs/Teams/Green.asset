@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32c186c51f4aed44abe9f66ac06c3404, type: 3}
-  m_Name: Red
+  m_Name: Green
   m_EditorClassIdentifier: 
-  _characterColor: {r: 1, g: 0.14509805, b: 0.14509805, a: 0}
-  _vehicleColor: {r: 1, g: 0, b: 0, a: 0}
-  _rockColor: {r: 1, g: 0, b: 0, a: 0}
-  _brickColor: {r: 1, g: 0.1764706, b: 0, a: 0}
+  _characterColor: {r: 0.23921569, g: 0.9137255, b: 0.23921569, a: 0}
+  _vehicleColor: {r: 0.15294118, g: 0.8392157, b: 0.34509805, a: 0}
+  _rockColor: {r: 0.32941177, g: 0.8862745, b: 0.32941177, a: 0}
+  _brickColor: {r: 0.47058824, g: 0.93333334, b: 0.47058824, a: 0}

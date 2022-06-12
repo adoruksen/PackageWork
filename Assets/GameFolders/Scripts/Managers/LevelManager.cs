@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour
 
         var prevArea = parts[0].SetupPart(level.transform);
         gameAreas.Add(prevArea);
-        for (var i = 0; i < parts.Length; i++)
+        for (var i = 1; i < parts.Length; i++)
         {
             var area = parts[i].SetupPart(level.transform, prevArea);
             gameAreas.Add(area);

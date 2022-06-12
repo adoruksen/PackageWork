@@ -41,7 +41,7 @@ public class DefaultGameMode : GameMode
         target.transform.SetParent(GameManager.instance.defaultParent);
         CameraController.instance.SetConfig(_introConfig);
         CameraController.instance.SetTarget(target);
-        var targetPosition = gameAreas[gameAreas.Length - 1].GetNextAreaPosition();
+        var targetPosition = gameAreas[^1].GetNextAreaPosition();
         var duration = targetPosition.z / _cameraAnimationSpeed;
         sequence.Append(target.transform.DOMoveZ(targetPosition.z, duration).SetEase(_cameraAnimationCurve));
         sequence.Append(target.transform.DOMoveZ(-0f, 1f).SetEase(Ease.InOutSine));

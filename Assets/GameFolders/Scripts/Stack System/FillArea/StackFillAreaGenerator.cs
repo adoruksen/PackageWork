@@ -40,7 +40,7 @@ public class StackFillAreaGenerator
         var rows = vehicleData.Cost / _rowStackAmount;
         var offset = Vector3.left * (.5f * (rows - 1));
 
-        fillArea.transform.Find("StackSign").localScale = new Vector3(rows / 2f, 1, 1);
+        fillArea.transform.Find("StackSign").localScale = new Vector3(rows / 2f, 1f, 1f);
         GenerateFillArea(fillArea, offset, rows, vehicleData.Cost);
         GenerateFillObjects(fillVisual, offset, rows);
         GenerateFillTrigger(fillTrigger, vehicle);
@@ -58,7 +58,7 @@ public class StackFillAreaGenerator
             rail.localPosition = position + Vector3.right * i;
         }
 
-        var wallScale = (8-rows) / 2f;
+        var wallScale = (8 - rows) / 2f;
         var wallPosition = Vector3.right * (wallScale / 2f + rows / 2f);
         SpawnWall(fillArea.transform, wallPosition, wallScale);
         wallPosition = Vector3.left * (wallScale / 2f + rows / 2f);
@@ -71,7 +71,7 @@ public class StackFillAreaGenerator
         var parent = fillVisual.transform.Find("FillObjects");
         for (var z = 0; z < _rowStackAmount; z++)
         {
-            for (var x = 0; x < rows;x ++)
+            for (var x = 0; x < rows; x++)
             {
                 var fillObject = Object.Instantiate(_fillObject, parent);
                 fillObject.transform.localPosition = position + new Vector3(x, 0, (z + .5f) * _fillObjectScale);
@@ -79,6 +79,7 @@ public class StackFillAreaGenerator
                 fillObjects.Add(fillObject);
             }
         }
+
         fillVisual.SetFillObjects(fillObjects.ToArray());
     }
 

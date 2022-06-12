@@ -13,7 +13,7 @@ public class EnterVehicleState : State
         _sequenceStarted = false;
     }
 
-    protected override void OnStateExit(CharacterController controller)
+    public override void OnStateFixedUpdate(CharacterController controller)
     {
         if (_sequenceStarted) return;
         var offset = controller.vehicle.transform.position - controller.Rigidbody.position;

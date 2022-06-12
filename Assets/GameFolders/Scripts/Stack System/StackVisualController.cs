@@ -20,12 +20,14 @@ public class StackVisualController : MonoBehaviour
     {
         _stackController.OnStackAdded += UpdateVisualAdded;
         _stackController.OnStackUsed += UpdateVisualUsed;
+        _stackController.OnStackLost += UpdateVisualLostAll;
     }
 
     private void OnDisable()
     {
         _stackController.OnStackAdded -= UpdateVisualAdded;
         _stackController.OnStackUsed -= UpdateVisualUsed;
+        _stackController.OnStackLost -= UpdateVisualLostAll;
     }
 
     private void UpdateVisualAdded(Brick obj)
@@ -45,5 +47,14 @@ public class StackVisualController : MonoBehaviour
             BrickManager.instance.RemoveObject(obj);
             obj.transform.localScale = Vector3.one;
         });
+    }
+
+    private void UpdateVisualLostAll()
+    {
+        while (_stackedObjects.Count > 0)
+        {
+            var obj = _stackedObjects.Pop();
+            obj.SetLost();
+        }
     }
 }

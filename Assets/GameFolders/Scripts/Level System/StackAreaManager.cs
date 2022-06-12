@@ -97,7 +97,7 @@ public class StackAreaManager : GameAreaManager
         for (var i = 0; i < rockAmount; i++)
         {
             var index = Random.Range(0, emptySlots.Count);
-            var rock = BrickManager.instance.SpawnObject(team);
+            var rock = RockManager.instance.SpawnObject(team);
             _grid.AddItemToSlot(rock.GetComponent<GridObject>(), emptySlots[index]);
         }
 

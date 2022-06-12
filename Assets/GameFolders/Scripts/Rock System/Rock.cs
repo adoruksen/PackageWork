@@ -12,7 +12,7 @@ public class Rock : MonoBehaviour ,IHaveTeam
     public Team Team => _team;
     [SerializeField, DisableInPlayMode] private Team _team;
 
-    [ShowInInspector, ReadOnly, ProgressBar(0, "_maxHealth")] public int Health { get; private set; }
+    [ShowInInspector, ReadOnly, ProgressBar(0, "$_maxHealth")] public int Health { get; private set; }
     [SerializeField] private int _maxHealth;
 
     [SerializeField] private int _stackAmount;

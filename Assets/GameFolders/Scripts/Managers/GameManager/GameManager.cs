@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : RuffGameManager
@@ -28,6 +26,7 @@ public class GameManager : RuffGameManager
     public void InitializeGameMode(GameMode gameMode)
     {
         if (_currentGameMode != null) _currentGameMode.DeinitializeGameMode();
+        ClearDefaultParent();
         _currentGameMode = gameMode;
         _currentGameMode.InitializeGameMode();
         LevelInitialize();
@@ -79,5 +78,13 @@ public class GameManager : RuffGameManager
     protected void LevelEnd()
     {
         OnGameEnd?.Invoke();
+    }
+
+    private void ClearDefaultParent()
+    {
+        for (int i = 0; i < defaultParent.childCount; i++)
+        {
+            Destroy(defaultParent.GetChild(i).gameObject);
+        }
     }
 }

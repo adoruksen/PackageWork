@@ -52,7 +52,7 @@ public class GridController : MonoBehaviour
     {
         var xOffset = (-((float)(_size.x - 1) / 2) + x) * _space.x;
         var zOffset = (-((float)(_size.y - 1) / 2) + z) * _space.y;
-        return new Vector3(xOffset, 0, zOffset);    
+        return new Vector3(xOffset, 0f, zOffset);
     }
 
 }

@@ -2,6 +2,7 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 
+[Serializable]
 public class PlayerFinishState : FinishState
 {
     [SerializeField] private float _jumpDistance;

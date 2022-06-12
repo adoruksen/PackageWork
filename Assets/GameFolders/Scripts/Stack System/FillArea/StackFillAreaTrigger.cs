@@ -17,6 +17,7 @@ public class StackFillAreaTrigger : MonoBehaviour ,IBeginInteract,IStayInteract,
     public void OnInteractBegin(IInteractor interactor)
     {
         var controller = (CharacterController)interactor;
+        controller.Bumper.isActive = false;
         AddStack(controller);
     }
 
